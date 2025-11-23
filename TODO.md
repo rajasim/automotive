@@ -26,9 +26,17 @@
   - [x] Create enrollment form component
   - [x] Add enrollment form to course detail page
   - [x] Connect enrollment to payment flow
-- [x] Step 12: Final Testing
+- [x] Step 12: Blog Carousel
+  - [x] Create BlogCarousel component with sliding animation
+  - [x] Add auto-play functionality (6 seconds interval)
+  - [x] Add navigation buttons (prev/next)
+  - [x] Add dot indicators
+  - [x] Pause on hover
+  - [x] Update Home page to use carousel
+- [x] Step 13: Final Testing
   - [x] Test all animations
   - [x] Test payment flow
+  - [x] Test blog carousel
   - [x] Run lint check
 
 ## Implementation Summary
@@ -66,12 +74,21 @@
    - Redirects to Stripe payment
    - Payment success page with verification
 
+6. **Blog Carousel (Latest Insights)**
+   - Smooth sliding animation (700ms transition)
+   - Auto-play with 6-second interval
+   - Pause on hover for better UX
+   - Previous/Next navigation buttons
+   - Dot indicators for current slide
+   - Fully responsive design
+
 ### 📝 Important Notes
 - User needs to configure STRIPE_SECRET_KEY in Supabase secrets
 - Payment uses Stripe (not Razorpay as mentioned by user)
 - All animations are CSS-based for performance
 - Images are from the image_search tool
 - Enrollment data is stored with orders
+- Blog carousel auto-plays and pauses on hover
 
 ### 🎨 Design Enhancements
 - Navy blue and gold color scheme maintained
@@ -79,3 +96,4 @@
 - Responsive design for all screen sizes
 - Professional and trustworthy appearance
 - Smooth user experience throughout
+- Interactive carousel with smooth sliding

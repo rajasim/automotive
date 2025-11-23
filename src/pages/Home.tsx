@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { GraduationCap, Shield, BookOpen, Users, ArrowRight } from 'lucide-react';
 import CourseCard from '@/components/CourseCard';
-import BlogCard from '@/components/BlogCard';
+import BlogCarousel from '@/components/BlogCarousel';
 import ContactForm from '@/components/ContactForm';
 import { courses } from '@/data/courses';
 import { blogPosts } from '@/data/blogs';
@@ -146,12 +146,8 @@ const Home: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 mb-8">
-            {latestBlogs.map((post, index) => (
-              <div key={post.id} className="animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <BlogCard post={post} />
-              </div>
-            ))}
+          <div className="max-w-4xl mx-auto mb-8">
+            <BlogCarousel posts={latestBlogs} autoPlayInterval={6000} />
           </div>
 
           <div className="text-center">
