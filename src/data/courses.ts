@@ -8,6 +8,9 @@ export const courses: Course[] = [
     description: 'Comprehensive training on automotive vehicle systems designed for students aspiring to enter the automotive industry.',
     duration: '4 weekends × 4 hours (Saturday + Sunday)',
     targetAudience: 'Students',
+    price: 15000,
+    currency: 'INR',
+    image: 'https://miaoda-site-img.s3cdn.medo.dev/images/7af17404-eb28-4f5e-99fa-cd7cc5d6ef95.jpg',
     topics: [
       'Vehicle layouts/configuration based on engine position',
       'Chassis/Powertrain systems',
@@ -37,6 +40,9 @@ export const courses: Course[] = [
     description: 'Professional training on ISO 26262 functional safety standards for automotive professionals and corporate teams.',
     duration: 'Multiple sessions (3+ hours each)',
     targetAudience: 'Corporate Professionals',
+    price: 25000,
+    currency: 'INR',
+    image: 'https://miaoda-site-img.s3cdn.medo.dev/images/624d6b62-de59-4eff-9148-47bc47f0613c.jpg',
     topics: [
       'FuSa overview/Need for FuSa/Coverage & basics of CS (3+ hours)',
       'Part 2 (4 hours)',

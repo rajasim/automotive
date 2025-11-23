@@ -4,6 +4,7 @@ import CourseDetail from './pages/CourseDetail';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import Contact from './pages/Contact';
+import PaymentSuccess from './pages/PaymentSuccess';
 import type { ReactNode } from 'react';
 
 interface RouteConfig {
@@ -49,6 +50,12 @@ const routes: RouteConfig[] = [
     path: '/contact',
     element: <Contact />,
     visible: true
+  },
+  {
+    name: 'Payment Success',
+    path: '/payment-success',
+    element: <PaymentSuccess />,
+    visible: false
   }
 ];
 

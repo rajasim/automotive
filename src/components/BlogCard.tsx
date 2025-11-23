@@ -17,10 +17,10 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   };
 
   return (
-    <Card className="shadow-card hover:shadow-elegant transition-smooth border-border h-full flex flex-col">
+    <Card className="shadow-card hover:shadow-elegant transition-smooth border-border h-full flex flex-col group">
       <CardHeader>
         <div className="flex items-center justify-between mb-2">
-          <Badge variant="secondary" className="bg-accent/10 text-accent hover:bg-accent/20">
+          <Badge variant="secondary" className="bg-accent/10 text-accent hover:bg-accent/20 transition-smooth">
             {post.category}
           </Badge>
           <div className="flex items-center text-sm text-muted-foreground">
@@ -28,7 +28,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
             {post.readTime}
           </div>
         </div>
-        <CardTitle className="text-2xl text-primary hover:text-accent transition-smooth">
+        <CardTitle className="text-2xl text-primary group-hover:text-accent transition-smooth">
           <Link to={`/blog/${post.slug}`}>{post.title}</Link>
         </CardTitle>
         <CardDescription className="text-base">{post.excerpt}</CardDescription>
@@ -43,9 +43,9 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
       </CardContent>
       <CardFooter>
         <Link to={`/blog/${post.slug}`} className="w-full">
-          <Button variant="outline" className="w-full group">
+          <Button variant="outline" className="w-full group/btn">
             Read More
-            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-smooth" />
+            <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-smooth" />
           </Button>
         </Link>
       </CardFooter>
