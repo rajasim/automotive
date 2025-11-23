@@ -1,67 +1,53 @@
 import React from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-r from-amber-50 to-orange-50 border-t border-amber-200">
-      <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* ================= About Us ================= */}
+    <footer className="bg-primary text-primary-foreground border-t border-accent/20">
+      <div className="max-w-7xl mx-auto py-12 px-4 xl:px-8">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
           <div>
-            {/* Title: Change to your project's "About Us" */}
-            <h3 className="text-lg font-semibold text-amber-800 mb-4">
-              {/* About Us */}
+            <h3 className="text-2xl font-bold mb-4">
+              <span className="text-accent">Auto</span>
+              <span>intelect</span>
             </h3>
-            <p className="text-gray-600">
-              {/* Fill in your "About Us" introduction here, for example: Committed to xxx, making xxx more xxx */}
+            <p className="text-primary-foreground/80 leading-relaxed">
+              Empowering automotive professionals through comprehensive education in vehicle systems and functional safety standards.
             </p>
           </div>
 
-          {/* ================= Contact Information ================= */}
           <div>
-            {/* Title: Contact Information */}
-            <h3 className="text-lg font-semibold text-amber-800 mb-4">
-              {/* Contact Information */}
-            </h3>
-            <div className="text-gray-600 space-y-2">
-              <p>
-                {/* Address: XXX Street, XXX District, XXX City, XXX Province */}
-              </p>
-              <p>
-                {/* Phone: 010-XXXXXXX */}
-              </p>
-              <p>
-                {/* Email: info@example.com */}
-              </p>
+            <h3 className="text-xl font-semibold mb-4 text-accent">Contact Information</h3>
+            <div className="space-y-3 text-primary-foreground/80">
+              <div className="flex items-start space-x-3">
+                <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-accent" />
+                <p>Automotive Engineering Institute, Technology Park</p>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 flex-shrink-0 text-accent" />
+                <p>+91-XXXX-XXXXXX</p>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 flex-shrink-0 text-accent" />
+                <p>info@autointelect.com</p>
+              </div>
             </div>
           </div>
 
-          {/* ================= Business Hours / Other Information / Can be deleted ================= */}
           <div>
-            {/* Title: Can be changed to "Business Hours" or "Service Hours" */}
-            <h3 className="text-lg font-semibold text-amber-800 mb-4">
-              {/* Business Hours */}
-            </h3>
-            <div className="text-gray-600 space-y-2">
-              <p>
-                {/* Monday to Friday: 9:00-18:00 */}
-              </p>
-              <p>
-                {/* Please check announcements for weekends and public holidays */}
-              </p>
-              <p>
-                {/* Other notes, such as "Advance booking required" */}
-              </p>
+            <h3 className="text-xl font-semibold mb-4 text-accent">Training Hours</h3>
+            <div className="space-y-2 text-primary-foreground/80">
+              <p>Weekend Courses: Saturday & Sunday</p>
+              <p>Timing: 9:00 AM - 1:00 PM</p>
+              <p>Corporate Training: Flexible scheduling available</p>
             </div>
           </div>
         </div>
 
-        {/* ================= Copyright Section ================= */}
-        <div className="mt-8 pt-8 border-t border-amber-200 text-center text-gray-600">
-          <p>
-            {/* © {currentYear} Your Company or Organization Name */}
-          </p>
+        <div className="mt-12 pt-8 border-t border-accent/20 text-center text-primary-foreground/70">
+          <p>{currentYear} Autointelect</p>
         </div>
       </div>
     </footer>

@@ -1,4 +1,9 @@
-import SamplePage from './pages/SamplePage';
+import Home from './pages/Home';
+import Courses from './pages/Courses';
+import CourseDetail from './pages/CourseDetail';
+import Blog from './pages/Blog';
+import BlogDetail from './pages/BlogDetail';
+import Contact from './pages/Contact';
 import type { ReactNode } from 'react';
 
 interface RouteConfig {
@@ -10,9 +15,40 @@ interface RouteConfig {
 
 const routes: RouteConfig[] = [
   {
-    name: 'Sample Page',
+    name: 'Home',
     path: '/',
-    element: <SamplePage />
+    element: <Home />,
+    visible: true
+  },
+  {
+    name: 'Courses',
+    path: '/courses',
+    element: <Courses />,
+    visible: true
+  },
+  {
+    name: 'Course Detail',
+    path: '/courses/:slug',
+    element: <CourseDetail />,
+    visible: false
+  },
+  {
+    name: 'Blog',
+    path: '/blog',
+    element: <Blog />,
+    visible: true
+  },
+  {
+    name: 'Blog Detail',
+    path: '/blog/:slug',
+    element: <BlogDetail />,
+    visible: false
+  },
+  {
+    name: 'Contact',
+    path: '/contact',
+    element: <Contact />,
+    visible: true
   }
 ];
 
