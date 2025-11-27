@@ -5,37 +5,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
-All colors MUST be HSL.
-*/
+/* ----------------------------------------------------------
+   Global Design System – Colors MUST be in HSL
+---------------------------------------------------------- */
 
 @layer base {
   :root {
     --radius: 0.5rem;
+
+    /* Brand / Theme Colors */
     --background: 0 0% 100%;
     --foreground: 215 25% 15%;
+
     --card: 0 0% 100%;
     --card-foreground: 215 25% 15%;
+
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 15%;
+
     --primary: 215 35% 13%;
     --primary-foreground: 0 0% 100%;
+
     --secondary: 210 20% 95%;
     --secondary-foreground: 215 35% 13%;
+
     --muted: 210 20% 96%;
     --muted-foreground: 215 15% 50%;
+
     --accent: 43 74% 55%;
     --accent-foreground: 215 35% 13%;
-    --destructive: 0 84.2% 60.2%;
+
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
+
     --border: 215 20% 88%;
     --input: 215 20% 88%;
     --ring: 43 74% 55%;
+
+    /* Chart Colors */
     --chart-1: 215 35% 13%;
     --chart-2: 43 74% 55%;
     --chart-3: 210 20% 70%;
     --chart-4: 215 25% 35%;
     --chart-5: 43 60% 45%;
+
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 215 25% 15%;
     --sidebar-primary: 215 35% 13%;
@@ -44,36 +58,51 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 215 35% 13%;
     --sidebar-border: 215 20% 88%;
     --sidebar-ring: 43 74% 55%;
+
+    /* Motion + Shadows */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --shadow-elegant: 0 10px 30px -10px hsl(215 35% 13% / 0.15);
     --shadow-card: 0 4px 12px -2px hsl(215 35% 13% / 0.1);
   }
 
+  /* ----------------------------------------------------------
+     Dark Mode (class-based – works with Vite + React)
+  ---------------------------------------------------------- */
   .dark {
     --background: 215 35% 8%;
     --foreground: 0 0% 98%;
+
     --card: 215 30% 12%;
     --card-foreground: 0 0% 98%;
+
     --popover: 215 30% 12%;
     --popover-foreground: 0 0% 98%;
+
     --primary: 43 74% 55%;
     --primary-foreground: 215 35% 13%;
+
     --secondary: 215 25% 18%;
     --secondary-foreground: 0 0% 98%;
+
     --muted: 215 25% 18%;
     --muted-foreground: 215 15% 65%;
+
     --accent: 43 74% 55%;
     --accent-foreground: 215 35% 13%;
-    --destructive: 0 62.8% 30.6%;
+
+    --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
+
     --border: 215 25% 20%;
     --input: 215 25% 20%;
     --ring: 43 74% 55%;
+
     --chart-1: 43 74% 55%;
     --chart-2: 215 35% 70%;
     --chart-3: 210 20% 50%;
     --chart-4: 215 25% 40%;
     --chart-5: 43 60% 65%;
+
     --sidebar-background: 215 35% 10%;
     --sidebar-foreground: 0 0% 98%;
     --sidebar-primary: 43 74% 55%;
@@ -87,7 +116,7 @@ All colors MUST be HSL.
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
 
   body {
@@ -101,6 +130,16 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  /* Define text-foreground class to apply --foreground variable */
+  .text-foreground {
+    color: hsl(var(--foreground));
+  }
+
+  /* Other custom utilities */
+  .bg-background {
+    background-color: hsl(var(--background));
+  }
+
   .shadow-elegant {
     box-shadow: var(--shadow-elegant);
   }
@@ -137,6 +176,7 @@ All colors MUST be HSL.
     animation: bounceSubtle 2s ease-in-out infinite;
   }
 }
+
 
 @keyframes fadeIn {
   from {
