@@ -5,9 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ----------------------------------------------------------
-   Global Design System – Colors MUST be in HSL
----------------------------------------------------------- */
+
 
 @layer base {
   :root {
@@ -42,14 +40,14 @@
     --input: 215 20% 88%;
     --ring: 43 74% 55%;
 
-    /* Chart Colors */
+    
     --chart-1: 215 35% 13%;
     --chart-2: 43 74% 55%;
     --chart-3: 210 20% 70%;
     --chart-4: 215 25% 35%;
     --chart-5: 43 60% 45%;
 
-    /* Sidebar */
+    
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 215 25% 15%;
     --sidebar-primary: 215 35% 13%;
@@ -59,15 +57,13 @@
     --sidebar-border: 215 20% 88%;
     --sidebar-ring: 43 74% 55%;
 
-    /* Motion + Shadows */
+    
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --shadow-elegant: 0 10px 30px -10px hsl(215 35% 13% / 0.15);
     --shadow-card: 0 4px 12px -2px hsl(215 35% 13% / 0.1);
   }
 
-  /* ----------------------------------------------------------
-     Dark Mode (class-based – works with Vite + React)
-  ---------------------------------------------------------- */
+  
   .dark {
     --background: 215 35% 8%;
     --foreground: 0 0% 98%;
@@ -130,12 +126,12 @@
 }
 
 @layer utilities {
-  /* Define text-foreground class to apply --foreground variable */
+  
   .text-foreground {
     color: hsl(var(--foreground));
   }
 
-  /* Other custom utilities */
+  
   .bg-background {
     background-color: hsl(var(--background));
   }
