@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -19,6 +19,8 @@ type FormData = z.infer<typeof formSchema>;
 
 const ContactForm: React.FC = () => {
   const { toast } = useToast();
+  const [isProcessing, setIsProcessing] = useState(false);
+
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -29,18 +31,54 @@ const ContactForm: React.FC = () => {
     }
   });
 
-  const onSubmit = (data: FormData) => {
-    console.log('Form submitted:', data);
-    toast({
-      title: 'Message Sent!',
-      description: 'Thank you for contacting us. We will get back to you soon.'
-    });
-    form.reset();
+  const onSubmit = async (data: FormData) => {
+    setIsProcessing(true);
+    try {
+      // Send form data to the PHP backend
+      const response = await fetch('/path-to-your-php-backend/contact-form.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          message: data.message
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: 'Message Sent!',
+          description: 'Your inquiry has been sent successfully.',
+        });
+        form.reset(); // Reset the form after success
+      } else {
+        toast({
+          title: 'Error',
+          description: result.message || 'There was an error sending your message.',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: 'Submission Failed',
+        description: 'There was an error processing your request. Please try again later.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsProcessing(false);
+    }
   };
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        {/* Name Field */}
         <FormField
           control={form.control}
           name="name"
@@ -55,6 +93,7 @@ const ContactForm: React.FC = () => {
           )}
         />
 
+        {/* Email Field */}
         <FormField
           control={form.control}
           name="email"
@@ -69,6 +108,7 @@ const ContactForm: React.FC = () => {
           )}
         />
 
+        {/* Phone Field */}
         <FormField
           control={form.control}
           name="phone"
@@ -83,6 +123,7 @@ const ContactForm: React.FC = () => {
           )}
         />
 
+        {/* Message Field */}
         <FormField
           control={form.control}
           name="message"
@@ -101,8 +142,13 @@ const ContactForm: React.FC = () => {
           )}
         />
 
-        <Button type="submit" className="w-full" size="lg">
-          Send Message
+        {/* Submit Button */}
+        <Button type="submit" className="w-full" size="lg" disabled={isProcessing}>
+          {isProcessing ? (
+            <>Processing...</>
+          ) : (
+            'Submit Inquiry'
+          )}
         </Button>
       </form>
     </Form>

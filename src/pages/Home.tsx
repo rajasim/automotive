@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { GraduationCap, Shield, BookOpen, Users, ArrowRight } from 'lucide-react';
 import CourseCard from '@/components/CourseCard';
 import BlogCarousel from '@/components/BlogCarousel';
-import ContactForm from '@/components/ContactForm';
+
 import { courses } from '@/data/courses';
 import { blogPosts } from '@/data/blogs';
 
@@ -161,22 +161,67 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-16 xl:py-24">
-        <div className="max-w-4xl mx-auto px-4 xl:px-8">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl xl:text-4xl font-bold mb-4 text-primary">Get in Touch</h2>
-            <p className="text-lg xl:text-xl text-muted-foreground">
-              Have questions about our courses? We're here to help you get started.
-            </p>
-          </div>
+     <section className="py-16 xl:py-24 bg-gray-50">
+  <div className="max-w-4xl mx-auto px-4 xl:px-8">
+    <div className="text-center mb-12 animate-fade-in">
+      <h2 className="text-3xl xl:text-4xl font-bold mb-4 text-primary">Why Choose Auto Intelligence?</h2>
+      <p className="text-lg xl:text-xl text-muted-foreground">
+        Discover the core strengths that set us apart in delivering top tier automotive cybersecurity and functional safety training.
+      </p>
+    </div>
 
-          <Card className="shadow-elegant border-border animate-scale-in">
-            <CardContent className="p-8">
-              <ContactForm />
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Unmatched Expertise and Comprehensive Curriculum */}
+      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+        <h3 className="text-xl font-semibold text-primary mb-3">Unmatched Expertise and Comprehensive Curriculum</h3>
+        <p className="text-muted-foreground">
+          Our meticulously designed curriculum covers every essential aspect of automotive cybersecurity and functional safety. From theoretical foundations to practical applications, we explore cutting-edge topics like V2X, autonomous vehicles, and AI.
+        </p>
+      </div>
+
+      {/* Strategic Industry Collaborations */}
+      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+        <h3 className="text-xl font-semibold text-primary mb-3">Strategic Industry Collaborations</h3>
+        <p className="text-muted-foreground">
+          We connect deeply with industry needs through collaborations with top OEMs and cybersecurity firms. Our curriculum includes regular guest lectures, workshops, and panel discussions, offering real world insights and networking opportunities.
+        </p>
+      </div>
+
+      {/* Agile Learning Methodologies */}
+      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+        <h3 className="text-xl font-semibold text-primary mb-3">Agile Learning Methodologies</h3>
+        <p className="text-muted-foreground">
+          We provide modern, well-equipped training spaces with interactive and immersive learning experiences, leveraging technology-enhanced training tools for maximum engagement and practical skills development.
+        </p>
+      </div>
+
+      {/* Tailored Training Programs */}
+      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+        <h3 className="text-xl font-semibold text-primary mb-3">Tailored Training Programs</h3>
+        <p className="text-muted-foreground">
+          We offer customized training solutions to meet your organization’s specific needs, with flexible in person and online learning options that can be adapted for different levels and roles.
+        </p>
+      </div>
+
+      {/* Continuous Professional Development */}
+      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+        <h3 className="text-xl font-semibold text-primary mb-3">Continuous Professional Development</h3>
+        <p className="text-muted-foreground">
+          Our certification programs not only enhance your credibility but also address key industry skill gaps. As part of our robust alumni network, you’ll have ongoing access to mentorship and valuable industry resources.
+        </p>
+      </div>
+
+      {/* Research and Knowledge Sharing */}
+      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+        <h3 className="text-xl font-semibold text-primary mb-3">Research and Knowledge Sharing</h3>
+        <p className="text-muted-foreground">
+          We foster a culture of research, innovation, and knowledge sharing, contributing to industry advancements through white papers, case studies, and other valuable insights.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };

@@ -5,6 +5,8 @@ import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import Contact from './pages/Contact';
 import PaymentSuccess from './pages/PaymentSuccess';
+import Article from './pages/Article'; // New page for article list
+
 import type { ReactNode } from 'react';
 
 interface RouteConfig {
@@ -45,6 +47,13 @@ const routes: RouteConfig[] = [
     element: <BlogDetail />,
     visible: false
   },
+  {
+    name: 'Article',
+    path: '/Article',
+    element: <Article />, // New page for article list
+    visible: true
+  },
+  
   {
     name: 'Contact',
     path: '/contact',

@@ -66,6 +66,78 @@ export const courses: Course[] = [
       'Gain expertise in safety validation and verification',
       'Develop skills for safety case documentation'
     ]
+  },
+  {
+    id: '3',
+    title: 'AIAG-VDA FMEA Course',
+    slug: 'aiag-vda-fmea-course',
+    description: 'In-depth training on AIAG-VDA FMEA Course used in modern vehicles.',
+    duration: 'One day course × 6 hours',
+    targetAudience: 'Engineering Students & Professionals',
+    price: 18000,
+    currency: 'INR',
+    image: 'https://i.ibb.co/5XFz9Qjn/IMG-20251130-WA0021.jpg', // Replace with your actual image URL
+    topics: [
+      'History of DFMEA',
+      'FMEA as part of other core tools',
+      'Various QMS standards',
+      'Difference between AIAG and AIAG-VDA FMEA',
+      'Use of Action Priority (AP) instead of Risk Prioritization Number (RPN)',
+      '7-Step approach',
+      'What is System /Design FMEA?',
+      'What is PFMEA',
+      'What is Supplemental FMEA-Monitoring and System Response (MSR)'
+    ],
+    eligibility: [
+      'Engineering students (Electrical, Electronics, Automotive)',
+      'Professionals in automotive electronics or related fields',
+      'Anyone interested in learning about the electronics in modern vehicles'
+    ],
+    learningOutcomes: [
+      'Understand the evolution and purpose of FMEA in product and process development.',
+      'Apply AIAG–VDA 7-Step FMEA methodology effectively.',
+      'Differentiate between AIAG 4th Edition and AIAG–VDA 1st Edition FMEA standards.',
+      'Evaluate and prioritize risks using Action Priority (AP).',
+      'Develop complete System/Design FMEAs with proper severity, occurrence, and detection assessments.',
+      'Create robust Process FMEAs aligned with APQP & PPAP requirements.'
+    ]
+  },
+  {
+    id: '4',
+    title: 'Cybersecurity in Automotive Systems',
+    slug: 'cybersecurity-in-automotive-systems',
+    description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
+    duration: 'One day course × 6 hours',
+    targetAudience: 'Engineering Students & Professionals',
+    price: 18000,
+    currency: 'INR',
+    image: 'https://i.ibb.co/5XFz9Qjn/IMG-20251130-WA0021.jpg', // Replace with your actual image URL
+    topics: [
+      'Introduction to Cybersecurity',
+      'Introduction to Automotive Cybersecurity',
+      'Need for Vehicle Security',
+      'Safety vs Cybersecurity',
+      'Business Impact',
+      'CIA Triad',
+      'Real-world cybersecurity failures',
+      'Attack vectors & best practices',
+      'Backend/server-side risks',
+      'Keyless entry attacks',
+      'Types of attacks'
+    ],
+    eligibility: [
+      'Engineering students (Electrical, Electronics, Automotive)',
+      'Professionals in automotive electronics or related fields',
+      'Anyone interested in learning about the electronics in modern vehicles'
+    ],
+    learningOutcomes: [
+      'Understand fundamental concepts of automotive cybersecurity.',
+      'Learn ISO/SAE 21434 terminology, structure, and compliance requirements.',
+      'Perform Threat Analysis & Risk Assessment (TARA).',
+      'Identify attack paths, vulnerabilities, and mitigation techniques.',
+      'Learn automotive-specific testing methods (fuzzing, penetration testing, scanning).',
+      'Gain expertise in cybersecurity controls and lifecycle management.'
+    ]
   }
 ];
 

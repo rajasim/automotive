@@ -7,7 +7,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { supabase } from '@/db/supabase';
 import { Loader2 } from 'lucide-react';
 import type { Course } from '@/types';
 
@@ -30,60 +29,59 @@ interface EnrollmentFormProps {
 const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ course, onSuccess }) => {
   const { toast } = useToast();
   const [isProcessing, setIsProcessing] = useState(false);
-  
+
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: '',
-      email: '',
-      phone: '',
-      education: '',
-      experience: '',
-      message: ''
+      name: '', // Default value for name
+      email: '', // Default value for email
+      phone: '', // Default value for phone
+      education: '', // Default value for education
+      experience: '', // Default value for experience
+      message: '' // Default value for message (optional)
     }
   });
 
   const onSubmit = async (data: FormData) => {
     setIsProcessing(true);
     try {
-      const { data: checkoutData, error } = await supabase.functions.invoke('create_stripe_checkout', {
+      // Send the form data to the backend (e.g., PHP backend)
+      const response = await fetch('YOUR-PHP-BACKEND-URL/contact-form.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
-          items: [
-            {
-              name: course.title,
-              price: course.price,
-              quantity: 1,
-              image_url: course.image
-            }
-          ],
-          currency: course.currency,
-          payment_method_types: ['card'],
-          enrollment_data: data
-        })
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          education: data.education,
+          experience: data.experience,
+          message: data.message || '', // message is optional
+        }),
       });
 
-      if (error) {
-        const errorMsg = await error?.context?.text();
-        console.error('Edge function error in create_stripe_checkout:', errorMsg);
-        throw new Error(errorMsg || 'Failed to create checkout session');
-      }
+      const result = await response.json();
 
-      if (checkoutData?.data?.url) {
-        window.open(checkoutData.data.url, '_blank');
+      if (response.ok) {
         toast({
-          title: 'Redirecting to Payment',
-          description: 'Please complete your payment in the new tab.'
+          title: 'Message Sent!',
+          description: 'Thank you for contacting us. We will get back to you soon.',
         });
         if (onSuccess) onSuccess();
       } else {
-        throw new Error('No checkout URL received');
+        toast({
+          title: 'Error',
+          description: result.message || 'Something went wrong. Please try again later.',
+          variant: 'destructive',
+        });
       }
     } catch (error) {
-      console.error('Enrollment error:', error);
+      console.error('Error submitting form:', error);
       toast({
-        title: 'Enrollment Failed',
-        description: error instanceof Error ? error.message : 'Please try again later.',
-        variant: 'destructive'
+        title: 'Submission Failed',
+        description: 'Something went wrong. Please try again later.',
+        variant: 'destructive',
       });
     } finally {
       setIsProcessing(false);
@@ -93,6 +91,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ course, onSuccess }) =>
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        {/* Name Field */}
         <FormField
           control={form.control}
           name="name"
@@ -107,6 +106,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ course, onSuccess }) =>
           )}
         />
 
+        {/* Email Field */}
         <FormField
           control={form.control}
           name="email"
@@ -121,6 +121,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ course, onSuccess }) =>
           )}
         />
 
+        {/* Phone Field */}
         <FormField
           control={form.control}
           name="phone"
@@ -135,6 +136,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ course, onSuccess }) =>
           )}
         />
 
+        {/* Education Background Field */}
         <FormField
           control={form.control}
           name="education"
@@ -149,6 +151,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ course, onSuccess }) =>
           )}
         />
 
+        {/* Experience Level Field */}
         <FormField
           control={form.control}
           name="experience"
@@ -163,6 +166,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ course, onSuccess }) =>
           )}
         />
 
+        {/* Message Field */}
         <FormField
           control={form.control}
           name="message"
@@ -181,6 +185,7 @@ const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ course, onSuccess }) =>
           )}
         />
 
+        {/* Submit Button */}
         <Button type="submit" className="w-full" size="lg" disabled={isProcessing}>
           {isProcessing ? (
             <>
