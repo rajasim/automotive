@@ -71,7 +71,7 @@ export const courses: Course[] = [
     id: '3',
     title: ' FMEA Program',
     slug: 'aiag-vda-fmea-program',
-    description: 'In-depth training on AIAG-VDA FMEA Program used in modern vehicles (COMING SOON..).',
+    description: 'In-depth training on  FMEA Program used in modern vehicles (COMING SOON..).',
     duration: 'One day program × 6 hours',
     targetAudience: 'Engineering Students & Professionals',
     price: 18000,
