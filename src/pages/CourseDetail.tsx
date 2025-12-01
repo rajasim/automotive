@@ -38,7 +38,7 @@ const CourseDetail: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 xl:px-8 relative z-10">
           <Link to="/courses" className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-smooth animate-slide-in-left">
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Courses
+            Back to Programs
           </Link>
           <div className="animate-fade-in">
             <Badge className="mb-4 bg-accent text-accent-foreground font-semibold px-4 py-2 text-lg">
@@ -168,7 +168,7 @@ const CourseDetail: React.FC = () => {
 
               <Card className="shadow-card border-border bg-accent/5 animate-scale-in" style={{ animationDelay: '0.2s' }}>
                 <CardHeader>
-                  <CardTitle className="text-xl text-primary">Course Fee</CardTitle>
+                  <CardTitle className="text-xl text-primary">Program Fee</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="text-3xl font-bold text-accent">

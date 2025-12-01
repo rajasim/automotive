@@ -3,7 +3,7 @@ import type { Course } from '@/types';
 export const courses: Course[] = [
   {
     id: '1',
-    title: 'Weekend Course: Vehicle Systems',
+    title: 'Weekend Program: Vehicle Systems',
     slug: 'vehicle-systems',
     description: 'Comprehensive training on automotive vehicle systems designed for students aspiring to enter the automotive industry.',
     duration: '4 weekends × 4 hours (Saturday + Sunday)',
@@ -35,7 +35,7 @@ export const courses: Course[] = [
   },
   {
     id: '2',
-    title: 'Weekend Course: ISO 26262',
+    title: 'Weekend Program: ISO 26262',
     slug: 'iso-26262',
     description: 'Professional training on ISO 26262 functional safety standards for automotive professionals and corporate teams.',
     duration: 'Multiple sessions (3+ hours each)',
@@ -69,10 +69,10 @@ export const courses: Course[] = [
   },
   {
     id: '3',
-    title: 'AIAG-VDA FMEA Course',
-    slug: 'aiag-vda-fmea-course',
-    description: 'In-depth training on AIAG-VDA FMEA Course used in modern vehicles.',
-    duration: 'One day course × 6 hours',
+    title: 'AIAG-VDA FMEA Program',
+    slug: 'aiag-vda-fmea-program',
+    description: 'In-depth training on AIAG-VDA FMEA Program used in modern vehicles.',
+    duration: 'One day program × 6 hours',
     targetAudience: 'Engineering Students & Professionals',
     price: 18000,
     currency: 'INR',
@@ -107,9 +107,9 @@ export const courses: Course[] = [
     title: 'Cybersecurity in Automotive Systems',
     slug: 'cybersecurity-in-automotive-systems',
     description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
-    duration: 'One day course × 6 hours',
+    duration: 'One day program × 6 hours',
     targetAudience: 'Engineering Students & Professionals',
-    price: 18000,
+    price: 16.000,
     currency: 'INR',
     image: 'https://i.ibb.co/5XFz9Qjn/IMG-20251130-WA0021.jpg', // Replace with your actual image URL
     topics: [

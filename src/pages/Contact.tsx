@@ -31,9 +31,7 @@ const Contact: React.FC = () => {
                       <div>
                         <h3 className="font-semibold text-lg mb-1 text-primary">Address</h3>
                         <p className="text-muted-foreground">
-                          Automotive Engineering Institute<br />
-                          Technology Park, Innovation District<br />
-                          City, State - 000000
+                          Automotive Engineering Institute, 1170 15A 4th Floor City Vista<br></br> Fountain Road Kharadi Pune Maharashtra 411014
                         </p>
                       </div>
                     </div>
@@ -48,7 +46,7 @@ const Contact: React.FC = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-lg mb-1 text-primary">Phone</h3>
-                        <p className="text-muted-foreground">+91-XXXX-XXXXXX</p>
+                        <p className="text-muted-foreground">+91 94223 12280</p>
                         <p className="text-sm text-muted-foreground mt-1">Mon-Fri: 9:00 AM - 6:00 PM</p>
                       </div>
                     </div>

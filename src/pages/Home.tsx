@@ -29,12 +29,12 @@ const Home: React.FC = () => {
               Excellence in <span className="text-accent">Automotive</span> Engineering Education
             </h1>
             <p className="text-xl xl:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">
-              Empowering students and professionals with cutting-edge knowledge in vehicle systems and ISO 26262 functional safety standards.
+              Empowering students and professionals with cutting-edge knowledge in vehicle systems and ISO 26262,AIAG-VDA FMEA Program Cybersecurity in Automotive Systems functional safety standards.
             </p>
             <div className="flex flex-col xl:flex-row gap-4">
               <Link to="/courses">
                 <Button size="lg" className="w-full xl:w-auto text-lg px-8 animate-scale-in">
-                  Explore Courses
+                  Explore Programs
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -101,7 +101,7 @@ const Home: React.FC = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Weekend courses designed for students and working professionals.
+                  Weekend Programs designed for students and working professionals.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -112,7 +112,7 @@ const Home: React.FC = () => {
       <section className="py-16 xl:py-24">
         <div className="max-w-7xl mx-auto px-4 xl:px-8">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl xl:text-4xl font-bold mb-4 text-primary">Our Courses</h2>
+            <h2 className="text-3xl xl:text-4xl font-bold mb-4 text-primary">Our Programs</h2>
             <p className="text-lg xl:text-xl text-muted-foreground max-w-3xl mx-auto">
               Specialized training programs designed for different career stages and professional needs.
             </p>
@@ -129,7 +129,7 @@ const Home: React.FC = () => {
           <div className="text-center">
             <Link to="/courses">
               <Button size="lg" variant="outline">
-                View All Courses
+                View All Programs
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -153,7 +153,7 @@ const Home: React.FC = () => {
           <div className="text-center">
             <Link to="/blog">
               <Button size="lg" variant="outline">
-                View All Articles
+                View All Blogs
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

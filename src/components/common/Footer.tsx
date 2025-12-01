@@ -29,7 +29,7 @@ Maharashtra 411014</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 flex-shrink-0 text-accent" />
-                <p>+91-XXXX-XXXXXX</p>
+                <p>+91 94223 12280</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 flex-shrink-0 text-accent" />

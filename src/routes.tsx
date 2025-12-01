@@ -24,7 +24,7 @@ const routes: RouteConfig[] = [
     visible: true
   },
   {
-    name: 'Courses',
+    name: 'Programs',
     path: '/courses',
     element: <Courses />,
     visible: true

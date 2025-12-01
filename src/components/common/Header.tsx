@@ -14,10 +14,12 @@ const Header: React.FC = () => {
       <nav className="max-w-7xl mx-auto px-4 xl:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center space-x-3">
-            <div className="text-3xl font-bold">
-              <span className="text-accent">Auto</span>
-              <span>intelect</span>
-            </div>
+            {/* Correct path to image in public folder */}
+            <img 
+              src="/WhatsApp Image 2025-12-01 at 6.35.21 PM.jpeg" 
+              alt="Auto Intelect Logo" 
+              className="h-12 w-auto" 
+            />
           </Link>
 
           <div className="hidden xl:flex items-center space-x-1">
