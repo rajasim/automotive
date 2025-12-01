@@ -41,7 +41,7 @@ Maharashtra 411014</p>
           <div>
             <h3 className="text-xl font-semibold mb-4 text-accent">Training Hours</h3>
             <div className="space-y-2 text-primary-foreground/80">
-              <p>Weekend Courses: Saturday & Sunday</p>
+              <p>Weekend Program: Saturday & Sunday</p>
               <p>Timing: 9:00 AM - 1:00 PM</p>
               <p>Corporate Training: Flexible scheduling available</p>
             </div>
