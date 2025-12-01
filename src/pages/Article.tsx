@@ -44,7 +44,7 @@ const article = {
 
     The future of automotive technology is exciting, but it is imperative that we proceed with caution, keeping the **human element** at the heart of our innovations.
   `,
-  author: "John Doe",
+  author: "SaM",
   date: "September 28, 2025",
   image: "https://cdn.prod.website-files.com/67e27eff24540db0ce89a256/68ac43f34cecabf06f4be63b_Paper.jpg" // Placeholder image for header
 };
