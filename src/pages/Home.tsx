@@ -29,7 +29,7 @@ const Home: React.FC = () => {
               Excellence in <span className="text-accent">Automotive</span> Engineering Education
             </h1>
             <p className="text-xl xl:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">
-              Empowering students and professionals with cutting-edge knowledge in vehicle systems and ISO 26262,AIAG-VDA FMEA Program Cybersecurity in Automotive Systems functional safety standards.
+              Empowering students and professionals with cutting-edge knowledge in vehicle systems and ISO 26262, FMEA Automotive Cybersecurity in Automotive Systems functional safety standards.
             </p>
             <div className="flex flex-col xl:flex-row gap-4">
               <Link to="/courses">

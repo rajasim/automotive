@@ -69,9 +69,9 @@ export const courses: Course[] = [
   },
   {
     id: '3',
-    title: 'AIAG-VDA FMEA Program',
+    title: ' FMEA Program',
     slug: 'aiag-vda-fmea-program',
-    description: 'In-depth training on AIAG-VDA FMEA Program used in modern vehicles.',
+    description: 'In-depth training on AIAG-VDA FMEA Program used in modern vehicles (COMING SOON..).',
     duration: 'One day program × 6 hours',
     targetAudience: 'Engineering Students & Professionals',
     price: 18000,
@@ -107,9 +107,9 @@ export const courses: Course[] = [
     title: 'Cybersecurity in Automotive Systems',
     slug: 'cybersecurity-in-automotive-systems',
     description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
-    duration: 'One day program × 6 hours',
+    duration: 'Two day program × 8 hours',
     targetAudience: 'Engineering Students & Professionals',
-    price: 16.000,
+    price: 16000,
     currency: 'INR',
     image: 'https://i.ibb.co/5XFz9Qjn/IMG-20251130-WA0021.jpg', // Replace with your actual image URL
     topics: [
