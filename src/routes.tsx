@@ -47,12 +47,7 @@ const routes: RouteConfig[] = [
     element: <BlogDetail />,
     visible: false
   },
-  {
-    name: 'Article',
-    path: '/Article',
-    element: <Article />, // New page for article list
-    visible: true
-  },
+  
   
   {
     name: 'Contact',

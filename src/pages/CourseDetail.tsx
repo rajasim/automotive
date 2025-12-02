@@ -175,7 +175,7 @@ const CourseDetail: React.FC = () => {
                     {formatPrice(course.price, course.currency)}
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Secure payment via Stripe. All major cards accepted.
+                    For Professionals (Not a professional? If you're a student, contact us at info@autointelects.com for exclusive student pricing )
                   </p>
                   <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                     <DialogTrigger asChild>

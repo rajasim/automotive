@@ -35,7 +35,7 @@ const ContactForm: React.FC = () => {
     setIsProcessing(true);
     try {
       // Send form data to the PHP backend
-      const response = await fetch('/path-to-your-php-backend/contact-form.php', {
+      const response = await fetch('http://localhost:80/autointeliigencontact/form-handler.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

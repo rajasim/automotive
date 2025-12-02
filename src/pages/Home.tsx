@@ -109,33 +109,33 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-16 xl:py-24">
-        <div className="max-w-7xl mx-auto px-4 xl:px-8">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl xl:text-4xl font-bold mb-4 text-primary">Our Programs</h2>
-            <p className="text-lg xl:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Specialized training programs designed for different career stages and professional needs.
-            </p>
-          </div>
+     <section className="py-16 xl:py-24">
+  <div className="max-w-7xl mx-auto px-4 xl:px-8">
+    <div className="text-center mb-12 animate-fade-in">
+      <h2 className="text-3xl xl:text-4xl font-bold mb-4 text-primary">Our Programs</h2>
+      <p className="text-lg xl:text-xl text-muted-foreground max-w-3xl mx-auto">
+        Specialized training programs designed for different career stages and professional needs.
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-8">
-            {courses.map((course, index) => (
-              <div key={course.id} style={{ animationDelay: `${index * 0.1}s` }}>
-                <CourseCard course={course} />
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link to="/courses">
-              <Button size="lg" variant="outline">
-                View All Programs
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
+    <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-8">
+      {courses.slice(0, 4).map((course, index) => (
+        <div key={course.id} style={{ animationDelay: `${index * 0.1}s` }}>
+          <CourseCard course={course} />
         </div>
-      </section>
+      ))}
+    </div>
+
+    <div className="text-center">
+      <Link to="/courses">
+        <Button size="lg" variant="outline">
+          View All Programs
+          <ArrowRight className="ml-2 h-5 w-5" />
+        </Button>
+      </Link>
+    </div>
+  </div>
+</section>
 
       <section className="py-16 xl:py-24 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 xl:px-8">

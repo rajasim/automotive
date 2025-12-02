@@ -7,7 +7,7 @@ export const courses: Course[] = [
     slug: 'vehicle-systems',
     description: 'Comprehensive training on automotive vehicle systems designed for students aspiring to enter the automotive industry.',
     duration: '4 weekends × 4 hours (Saturday + Sunday)',
-    targetAudience: 'Students',
+    targetAudience: 'Professionals',
     price: 15000,
     currency: 'INR',
     image: 'https://miaoda-site-img.s3cdn.medo.dev/images/7af17404-eb28-4f5e-99fa-cd7cc5d6ef95.jpg',
@@ -39,7 +39,7 @@ export const courses: Course[] = [
     slug: 'iso-26262',
     description: 'Professional training on ISO 26262 functional safety standards for automotive professionals and corporate teams.',
     duration: 'Multiple sessions (3+ hours each)',
-    targetAudience: 'Corporate Professionals',
+    targetAudience: 'Professionals',
     price: 25000,
     currency: 'INR',
     image: 'https://miaoda-site-img.s3cdn.medo.dev/images/624d6b62-de59-4eff-9148-47bc47f0613c.jpg',
@@ -73,7 +73,7 @@ export const courses: Course[] = [
     slug: 'aiag-vda-fmea-program',
     description: 'In-depth training on  FMEA Program used in modern vehicles (COMING SOON..).',
     duration: 'One day program × 6 hours',
-    targetAudience: 'Engineering Students & Professionals',
+    targetAudience: ' Professionals',
     price: 18000,
     currency: 'INR',
     image: 'https://i.ibb.co/5XFz9Qjn/IMG-20251130-WA0021.jpg', // Replace with your actual image URL
@@ -108,7 +108,81 @@ export const courses: Course[] = [
     slug: 'cybersecurity-in-automotive-systems',
     description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
     duration: 'Two day program × 8 hours',
-    targetAudience: 'Engineering Students & Professionals',
+    targetAudience: ' Professionals',
+    price: 16000,
+    currency: 'INR',
+    image: 'https://i.ibb.co/5XFz9Qjn/IMG-20251130-WA0021.jpg', // Replace with your actual image URL
+    topics: [
+      'Introduction to Cybersecurity',
+      'Introduction to Automotive Cybersecurity',
+      'Need for Vehicle Security',
+      'Safety vs Cybersecurity',
+      'Business Impact',
+      'CIA Triad',
+      'Real-world cybersecurity failures',
+      'Attack vectors & best practices',
+      'Backend/server-side risks',
+      'Keyless entry attacks',
+      'Types of attacks'
+    ],
+    eligibility: [
+      'Engineering students (Electrical, Electronics, Automotive)',
+      'Professionals in automotive electronics or related fields',
+      'Anyone interested in learning about the electronics in modern vehicles'
+    ],
+    learningOutcomes: [
+      'Understand fundamental concepts of automotive cybersecurity.',
+      'Learn ISO/SAE 21434 terminology, structure, and compliance requirements.',
+      'Perform Threat Analysis & Risk Assessment (TARA).',
+      'Identify attack paths, vulnerabilities, and mitigation techniques.',
+      'Learn automotive-specific testing methods (fuzzing, penetration testing, scanning).',
+      'Gain expertise in cybersecurity controls and lifecycle management.'
+    ]
+  },
+  {
+    id: '5',
+    title: 'Can',
+    slug: 'cybersecurity-in-automotive-systems',
+    description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
+    duration: 'Two day program × 8 hours',
+    targetAudience: ' Professionals',
+    price: 16000,
+    currency: 'INR',
+    image: 'https://i.ibb.co/5XFz9Qjn/IMG-20251130-WA0021.jpg', // Replace with your actual image URL
+    topics: [
+      'Introduction to Cybersecurity',
+      'Introduction to Automotive Cybersecurity',
+      'Need for Vehicle Security',
+      'Safety vs Cybersecurity',
+      'Business Impact',
+      'CIA Triad',
+      'Real-world cybersecurity failures',
+      'Attack vectors & best practices',
+      'Backend/server-side risks',
+      'Keyless entry attacks',
+      'Types of attacks'
+    ],
+    eligibility: [
+      'Engineering students (Electrical, Electronics, Automotive)',
+      'Professionals in automotive electronics or related fields',
+      'Anyone interested in learning about the electronics in modern vehicles'
+    ],
+    learningOutcomes: [
+      'Understand fundamental concepts of automotive cybersecurity.',
+      'Learn ISO/SAE 21434 terminology, structure, and compliance requirements.',
+      'Perform Threat Analysis & Risk Assessment (TARA).',
+      'Identify attack paths, vulnerabilities, and mitigation techniques.',
+      'Learn automotive-specific testing methods (fuzzing, penetration testing, scanning).',
+      'Gain expertise in cybersecurity controls and lifecycle management.'
+    ]
+  },
+  {
+    id: '6',
+    title: 'Tara ',
+    slug: 'cybersecurity-in-automotive-systems',
+    description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
+    duration: 'Two day program × 8 hours',
+    targetAudience: ' Professionals',
     price: 16000,
     currency: 'INR',
     image: 'https://i.ibb.co/5XFz9Qjn/IMG-20251130-WA0021.jpg', // Replace with your actual image URL
