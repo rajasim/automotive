@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">
               <span className="text-accent">Auto</span>
-              <span>intelect</span>
+              <span>intellects</span>
             </h3>
             <p className="text-primary-foreground/80 leading-relaxed">
-              Empowering automotive professionals through comprehensive education in vehicle systems and functional safety standards.
+              Empowering Autointellects professionals through comprehensive education in vehicle systems and functional safety standards.
             </p>
           </div>
 
@@ -23,33 +23,36 @@ const Footer: React.FC = () => {
             <div className="space-y-3 text-primary-foreground/80">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-accent" />
-                <p>Automotive Engineering Institute, 1170 15A 4th Floor City Vista
+                <p> 1170 15A 4th Floor City Vista
 Fountain Road Kharadi Pune
 Maharashtra 411014</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 flex-shrink-0 text-accent" />
-                <p>+91 94223 12280</p>
+                <p>+91 8888899999</p>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 flex-shrink-0 text-accent" />
-                <p>info@autointellects.com</p>
-              </div>
+             <div className="flex items-center space-x-3">
+  <Mail className="h-5 w-5 flex-shrink-0 text-accent" />
+  <a href="mailto:info@autointellects.com" className="text-accent hover:underline">
+    info@autointellects.com
+  </a>
+</div>
+
             </div>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-accent">Training Hours</h3>
+            <h3 className="text-xl font-semibold mb-4 text-accent">Training Schedule</h3>
             <div className="space-y-2 text-primary-foreground/80">
               <p>Weekend Program: Saturday & Sunday</p>
-              <p>Timing: 9:00 AM - 1:00 PM</p>
+              
               <p>Corporate Training: Flexible scheduling available</p>
             </div>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-accent/20 text-center text-primary-foreground/70">
-          <p>{currentYear} Autointelect</p>
+          <p>{currentYear} Autointellects</p>
         </div>
       </div>
     </footer>

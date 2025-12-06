@@ -16,7 +16,7 @@ const Header: React.FC = () => {
           <Link to="/" className="flex items-center space-x-3">
             {/* Correct path to image in public folder */}
             <img 
-              src="/WhatsApp Image 2025-12-01 at 6.35.21 PM.jpeg" 
+              src="/Screenshot 2025-12-03 205054.png" 
               alt="Auto Intelect Logo" 
               className="h-12 w-auto" 
             />

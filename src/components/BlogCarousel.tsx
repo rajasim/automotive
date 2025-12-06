@@ -65,25 +65,25 @@ const BlogCarousel: React.FC<BlogCarouselProps> = ({ posts, autoPlayInterval = 5
         </div>
       </div>
 
-      <Button
-        variant="outline"
-        size="icon"
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background shadow-lg z-10"
-        onClick={prevSlide}
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="h-6 w-6" />
-      </Button>
+     <Button
+  variant="outline"
+  size="icon"
+  className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background shadow-lg z-10 flex items-center justify-center" 
+  onClick={prevSlide}
+  aria-label="Previous slide"
+>
+  <ChevronLeft className="h-6 w-6 text-foreground" />
+</Button>
 
-      <Button
-        variant="outline"
-        size="icon"
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background shadow-lg z-10"
-        onClick={nextSlide}
-        aria-label="Next slide"
-      >
-        <ChevronRight className="h-6 w-6" />
-      </Button>
+<Button
+  variant="outline"
+  size="icon"
+  className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/90 hover:bg-background shadow-lg z-10 flex items-center justify-center"
+  onClick={nextSlide}
+  aria-label="Next slide"
+>
+  <ChevronRight className="h-6 w-6 text-foreground" />
+</Button>
 
       <div className="flex justify-center gap-2 mt-6">
         {posts.map((_, index) => (

@@ -36,7 +36,7 @@ const routes: RouteConfig[] = [
     visible: false
   },
   {
-    name: 'Blog',
+    name: 'Blogs',
     path: '/blog',
     element: <Blog />,
     visible: true

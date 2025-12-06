@@ -4,10 +4,12 @@ import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import { Toaster } from '@/components/ui/toaster';
 import routes from './routes';
+import Scrolltotop from './components/Scrolltotop'; 
 
 const App: React.FC = () => {
   return (
     <Router>
+      <Scrolltotop /> 
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">

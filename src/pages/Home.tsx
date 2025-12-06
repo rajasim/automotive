@@ -26,14 +26,14 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 xl:px-8 relative z-10">
           <div className="max-w-3xl animate-slide-in-left">
             <h1 className="text-4xl xl:text-6xl font-bold mb-6 leading-tight">
-              Excellence in <span className="text-accent">Automotive</span> Engineering Education
+              Excellence in <span className="text-accent">Autointellects </span> Engineering Education
             </h1>
             <p className="text-xl xl:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">
-              Empowering students and professionals with cutting-edge knowledge in Automotive Systems, Functional Safety  and ISO 26262, FMEA , Automotive Cybersecurity  and ISO 21434
+              Empowering students and professionals with cutting-edge knowledge in Autointellects, Functional Safety  and ISO 26262, FMEA , Automotive Cybersecurity  and ISO 21434
             </p>
             <div className="flex flex-col xl:flex-row gap-4">
               <Link to="/courses">
-                <Button size="lg" className="w-full xl:w-auto text-lg px-8 animate-scale-in">
+                <Button size="lg" className="w-full xl:w-auto text-lg px-8 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary animate-scale-in">
                   Explore Programs
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -65,7 +65,7 @@ const Home: React.FC = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Learn from industry professionals with years of practical experience in automotive engineering.
+                  Learn from industry professionals with years of practical experience in Autointellects.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -142,7 +142,7 @@ const Home: React.FC = () => {
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl xl:text-4xl font-bold mb-4 text-primary">Latest Insights</h2>
             <p className="text-lg xl:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Stay updated with the latest trends and knowledge in automotive engineering.
+              Stay updated with the latest trends and knowledge in Autointellects.
             </p>
           </div>
 
@@ -164,7 +164,7 @@ const Home: React.FC = () => {
      <section className="py-16 xl:py-24 bg-gray-50">
   <div className="max-w-4xl mx-auto px-4 xl:px-8">
     <div className="text-center mb-12 animate-fade-in">
-      <h2 className="text-3xl xl:text-4xl font-bold mb-4 text-primary">Why Choose Auto Intelligence?</h2>
+      <h2 className="text-3xl xl:text-4xl font-bold mb-4 text-primary">Why Choose Auto Intellects?</h2>
       <p className="text-lg xl:text-xl text-muted-foreground">
         Discover the core strengths that set us apart in delivering top tier automotive cybersecurity and functional safety training.
       </p>
