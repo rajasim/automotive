@@ -26,7 +26,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 xl:px-8 relative z-10">
           <div className="max-w-3xl animate-slide-in-left">
             <h1 className="text-4xl xl:text-6xl font-bold mb-6 leading-tight">
-              Excellence in <span className="text-accent">Autointellects </span> Engineering Education
+              Excellence in <span className="text-accent">Automotive </span> Engineering Education
             </h1>
             <p className="text-xl xl:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">
               Empowering students and professionals with cutting-edge knowledge in Autointellects, Functional Safety  and ISO 26262, FMEA , Automotive Cybersecurity  and ISO 21434
