@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
                         <Clock className="h-6 w-6 text-accent" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-lg mb-1 text-primary">Training Hours</h3>
+                        <h3 className="font-semibold text-lg mb-1 text-primary">Training Schedule</h3>
                         <p className="text-muted-foreground">
                           Weekend Courses: Saturday & Sunday<br />
                           Timing: 9:00 AM - 1:00 PM<br />
