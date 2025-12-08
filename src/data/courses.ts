@@ -8,7 +8,7 @@ export const courses: Course[] = [
     description: 'Comprehensive training on automotive vehicle systems designed for students aspiring to enter the automotive industry.',
     duration: '4 weekends × 4 hours (Saturday + Sunday)',
     targetAudience: 'Professionals',
-    price: 15000,
+    price: 30000,
     currency: 'INR',
     image: 'IMG_4784.JPG',
     topics: [
@@ -40,7 +40,7 @@ export const courses: Course[] = [
     description: 'Professional training on ISO 26262 functional safety standards for automotive professionals and corporate teams.',
     duration: 'Multiple sessions (3+ hours each)',
     targetAudience: 'Professionals',
-    price: 25000,
+    price: 60000,
     currency: 'INR',
     image: 'IMG_4783.JPG',
     topics: [
@@ -74,7 +74,7 @@ export const courses: Course[] = [
     description: 'In-depth training on  FMEA Program used in modern vehicles (COMING SOON..).',
     duration: 'One day program × 6 hours',
     targetAudience: ' Professionals',
-    price: 18000,
+    price: 12000,
     currency: 'INR',
     image: 'IMG_4785.JPG', // Replace with your actual image URL
     topics: [
@@ -109,7 +109,7 @@ export const courses: Course[] = [
     description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
     duration: 'Two day program × 8 hours',
     targetAudience: ' Professionals',
-    price: 16000,
+    price: 25000,
     currency: 'INR',
     image: 'IMG_4786.JPG', // Replace with your actual image URL
     topics: [
@@ -146,7 +146,7 @@ export const courses: Course[] = [
     description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
     duration: 'Two day program × 8 hours',
     targetAudience: ' Professionals',
-    price: 16000,
+    price: 20000,
     currency: 'INR',
     image: 'IMG_4787.JPG', // Replace with your actual image URL
     topics: [
@@ -183,7 +183,7 @@ export const courses: Course[] = [
     description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
     duration: 'Two day program × 8 hours',
     targetAudience: ' Professionals',
-    price: 16000,
+    price: 20000,
     currency: 'INR',
     image: 'IMG_4788.JPG', // Replace with your actual image URL
     topics: [
