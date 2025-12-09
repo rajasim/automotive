@@ -10,7 +10,7 @@ export const courses: Course[] = [
     targetAudience: 'Professionals',
     price: 30000,
     currency: 'INR',
-    image: 'IMG_4784.JPG',
+    image: '/images/IMG_4784.JPG',
     topics: [
       'Vehicle layouts/configuration based on engine position',
       'Chassis/Powertrain systems',
@@ -42,7 +42,7 @@ export const courses: Course[] = [
     targetAudience: 'Professionals',
     price: 60000,
     currency: 'INR',
-    image: 'IMG_4783.JPG',
+    image: '/images/IMG_4783.JPG',
     topics: [
       'FuSa overview/Need for FuSa/Coverage & basics of CS (3+ hours)',
       'Part 2 (4 hours)',
@@ -76,7 +76,7 @@ export const courses: Course[] = [
     targetAudience: ' Professionals',
     price: 12000,
     currency: 'INR',
-    image: 'IMG_4785.JPG', // Replace with your actual image URL
+    image: '/images/IMG_4785.JPG', // Replace with your actual image URL
     topics: [
       'History of DFMEA',
       'FMEA as part of other core tools',
@@ -111,7 +111,7 @@ export const courses: Course[] = [
     targetAudience: ' Professionals',
     price: 25000,
     currency: 'INR',
-    image: 'IMG_4786.JPG', // Replace with your actual image URL
+    image: '/images/IMG_4786.JPG', // Replace with your actual image URL
     topics: [
       'Introduction to Cybersecurity',
       'Introduction to Automotive Cybersecurity',
@@ -148,7 +148,7 @@ export const courses: Course[] = [
     targetAudience: ' Professionals',
     price: 20000,
     currency: 'INR',
-    image: 'IMG_4787.JPG', // Replace with your actual image URL
+    image: '/images/IMG_4787.JPG', // Replace with your actual image URL
     topics: [
       'Introduction to Cybersecurity',
       'Introduction to Automotive Cybersecurity',
@@ -185,7 +185,7 @@ export const courses: Course[] = [
     targetAudience: ' Professionals',
     price: 20000,
     currency: 'INR',
-    image: 'IMG_4788.JPG', // Replace with your actual image URL
+    image: '/images/IMG_4788.JPG', // Replace with your actual image URL
     topics: [
       'ISO 21434 Fundamentals (1 Hour)',
       'Mapping the Car’s Digital Anatomy (1 Hour)',
