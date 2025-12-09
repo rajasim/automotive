@@ -178,39 +178,39 @@ export const courses: Course[] = [
   },
   {
     id: '6',
-    title: 'Tara ',
-    slug: 'cybersecurity-in-automotive-systems',
-    description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
-    duration: 'Two day program × 8 hours',
+    title: 'Weekend Program: Automotive Cyber Battleground (TARA – ISO 21434) ',
+    slug: 'Industrial, hands-on cybersecurity analysis training based on ISO 21434 with deep technical practice.',
+    description: 'Industrial, hands-on cybersecurity analysis training based on ISO 21434 with deep technical practice.',
+    duration: '3 Days × 4 Hours per day (Total: 12 Hours)',
     targetAudience: ' Professionals',
     price: 20000,
     currency: 'INR',
     image: 'IMG_4788.JPG', // Replace with your actual image URL
     topics: [
-      'Introduction to Cybersecurity',
-      'Introduction to Automotive Cybersecurity',
-      'Need for Vehicle Security',
-      'Safety vs Cybersecurity',
-      'Business Impact',
-      'CIA Triad',
-      'Real-world cybersecurity failures',
-      'Attack vectors & best practices',
-      'Backend/server-side risks',
-      'Keyless entry attacks',
-      'Types of attacks'
+      'ISO 21434 Fundamentals (1 Hour)',
+      'Mapping the Car’s Digital Anatomy (1 Hour)',
+      'The Threat Universe (1 Hour)',
+      'Vulnerabilities & Attack Paths (1 Hour)',
+      'Impact Rating Like a Pro (2 Hours)',
+      '2. Threat Scenario Feasibility & Likelihood (1 Hour)',
+      'Determining Cybersecurity Risk Levels (1 Hour)',
+      'From Risk to Requirements (1 Hour)',
+      'Building a Complete TARA Flow (2 Hours)',
+      'Review, Documentation & Presentation (1 Hour)'
+      
     ],
     eligibility: [
-      'Engineering students (Electrical, Electronics, Automotive)',
-      'Professionals in automotive electronics or related fields',
-      'Anyone interested in learning about the electronics in modern vehicles'
+      ' Engineering students (Mechanical, Automotive, Electrical, Electronics, CS)',
+      'Recent graduates seeking cybersecurity specialization',
+      'Professionals transitioning into automotive cybersecurity'
     ],
     learningOutcomes: [
-      'Understand fundamental concepts of automotive cybersecurity.',
-      'Learn ISO/SAE 21434 terminology, structure, and compliance requirements.',
-      'Perform Threat Analysis & Risk Assessment (TARA).',
-      'Identify attack paths, vulnerabilities, and mitigation techniques.',
-      'Learn automotive-specific testing methods (fuzzing, penetration testing, scanning).',
-      'Gain expertise in cybersecurity controls and lifecycle management.'
+      'Understand the structure and purpose of ISO 21434.',
+      'Perform complete TARA (Threat Analysis & Risk Assessment) end-to-end.',
+      'Identify assets, threats, vulnerabilities, and attack paths.',
+      'Build cybersecurity goals and derive requirements.',
+      'Create and document professional TARA reports for industry use.',
+      'Gain practical, real-world automotive cybersecurity analysis experience.'
     ]
   }
 ];
