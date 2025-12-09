@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
                       <div>
                         <h3 className="font-semibold text-lg mb-1 text-primary">Address</h3>
                         <p className="text-muted-foreground">
-                          Automotive Engineering Institute, 1170 15A 4th Floor City Vista<br></br> Fountain Road Kharadi Pune Maharashtra 411014
+                           1170 15A 4th Floor City Vista<br></br> Fountain Road Kharadi Pune Maharashtra 411014
                         </p>
                       </div>
                     </div>
