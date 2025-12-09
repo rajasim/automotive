@@ -1,3 +1,4 @@
+import React from 'react';
 import Home from './pages/Home';
 import Courses from './pages/Courses';
 import CourseDetail from './pages/CourseDetail';
@@ -5,7 +6,6 @@ import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import Contact from './pages/Contact';
 import PaymentSuccess from './pages/PaymentSuccess';
-import Article from './pages/Article'; // New page for article list
 
 import type { ReactNode } from 'react';
 
@@ -47,8 +47,6 @@ const routes: RouteConfig[] = [
     element: <BlogDetail />,
     visible: false
   },
-  
-  
   {
     name: 'Contact',
     path: '/contact',
