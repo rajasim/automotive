@@ -1,10 +1,18 @@
 import type { Course } from '@/types';
+const generateSlug = (title: string): string => {
+  return title
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '') // Remove special characters
+    .replace(/\s+/g, '-') // Replace spaces with hyphens
+    .replace(/-+/g, '-'); // Remove consecutive hyphens
+};
+
 
 export const courses: Course[] = [
   {
     id: '1',
     title: 'Weekend Program: Vehicle Systems',
-    slug: 'vehicle-systems',
+    slug: generateSlug('vehicle-systems'),
     description: 'Comprehensive training on automotive vehicle systems designed for students aspiring to enter the automotive industry.',
     duration: '4 weekends × 4 hours (Saturday + Sunday)',
     targetAudience: 'Professionals',
@@ -36,7 +44,7 @@ export const courses: Course[] = [
   {
     id: '2',
     title: 'Weekend Program: ISO 26262',
-    slug: 'iso-26262',
+    slug: generateSlug('iso-26262'),
     description: 'Professional training on ISO 26262 functional safety standards for automotive professionals and corporate teams.',
     duration: 'Multiple sessions (3+ hours each)',
     targetAudience: 'Professionals',
@@ -70,7 +78,7 @@ export const courses: Course[] = [
   {
     id: '3',
     title: ' FMEA Program',
-    slug: 'aiag-vda-fmea-program',
+    slug: generateSlug('aiag-vda-fmea-program'),
     description: 'In-depth training on  FMEA Program used in modern vehicles (COMING SOON..).',
     duration: 'One day program × 6 hours',
     targetAudience: ' Professionals',
@@ -105,7 +113,7 @@ export const courses: Course[] = [
   {
     id: '4',
     title: 'Cybersecurity in Automotive Systems',
-    slug: 'cybersecurity-in-automotive-systems',
+    slug: generateSlug('cybersecurity-in-automotive-systems'),
     description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
     duration: 'Two day program × 8 hours',
     targetAudience: ' Professionals',
@@ -142,7 +150,7 @@ export const courses: Course[] = [
   {
     id: '5',
     title: 'Can',
-    slug: 'cybersecurity-in-automotive-systems',
+    slug: generateSlug('cybersecurity-in-automotive-systems'),
     description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
     duration: 'Two day program × 8 hours',
     targetAudience: ' Professionals',
@@ -179,7 +187,7 @@ export const courses: Course[] = [
   {
     id: '6',
     title: 'Weekend Program: Automotive Cyber Battleground (TARA – ISO 21434) ',
-    slug: 'Industrial, hands-on cybersecurity analysis training based on ISO 21434 with deep technical practice.',
+    slug: generateSlug('Industrial, hands-on cybersecurity analysis training based on ISO 21434 with deep technical practice.'),
     description: 'Industrial, hands-on cybersecurity analysis training based on ISO 21434 with deep technical practice.',
     duration: '3 Days × 4 Hours per day (Total: 12 Hours)',
     targetAudience: ' Professionals',
