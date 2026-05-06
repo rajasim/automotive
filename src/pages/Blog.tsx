@@ -1,6 +1,7 @@
 import React from 'react';
 import BlogCard from '@/components/BlogCard';
 import { blogPosts } from '@/data/blogs';
+import { Link } from 'react-router-dom';
 
 const Blog: React.FC = () => {
   return (

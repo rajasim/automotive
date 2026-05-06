@@ -235,12 +235,12 @@ Honeypots provide a unique, proactive cybersecurity approach by transforming att
   {
     id: '4',
     title: 'Exploring the World of Automotive Embedded Systems',
-    slug: 'hybrid-vs-electric-powertrains',
+    slug: 'hybrid vs electric-powertrains',
     excerpt: 'In the modern era of advanced automotive technology, the term “embedded systems” .',
     content: `
 # What Are Automotive Embedded Systems?
 
-An embedded system is essentially a computer system designed to perform one or a few dedicated functions, often within a larger system. In the context of automotive technology, these systems are embedded within the vehicle to manage specific functions. These could range from basic tasks like controlling engine functions and power management to more complex operations like advanced driver-assistance systems (ADAS) and in-vehicle infotainment.
+An embedded system is essentially a computer system designed to perform one or a few dedicated functions, often within a larger system. In the context of automotive technology, these systems are embedded within the vehicle to manage specific functions. These could range from basic tasks like controlling engine functions and power management to more complex operations like advanced driver-assistance systems (ADAS) and in vehicle infotainment.
 
 ## Key Components of Automotive Embedded Systems
 
@@ -259,7 +259,7 @@ Microcontrollers and Microprocessors
 
 Role: The central processing units that handle data processing and execute commands in real-time.
 
-Function: Execute control algorithms for systems such as engine management, transmission, and ADAS (Advanced Driver-Assistance Systems).
+Function: Execute control algorithms for systems such as engine management, transmission, and ADAS (Advanced Driver Assistance Systems).
 
 Sensors and Actuators
 
@@ -333,7 +333,7 @@ The Future of Automotive Embedded Systems
 
 The role of embedded systems is set to grow as automotive technology evolves. Here are some key trends:
 
-Autonomous Vehicles (AVs): The rise of self-driving cars is driving innovation in embedded software, focusing on real-time decision-making and safety.
+Autonomous Vehicles (AVs): The rise of self driving cars is driving innovation in embedded software, focusing on real time decision-making and safety.
 
 Electric Vehicles (EVs): Embedded systems will be crucial for battery management, power distribution, and charging infrastructure.
 
@@ -351,9 +351,150 @@ Automotive embedded systems are transforming how vehicles operate, ensuring enha
     readTime: '8 min read'
   },
   {
-  id: '4',
+   id: '5',
+    title: 'Navigating the Backbone of Automotive Communication: A Deep Dive into CAN (Controller Area Network)',
+    slug: 'navigating can communication',
+    excerpt: 'Modern vehicles are no longer collections of isolated electronic units. They are distributed real-time systems.',
+    content: `
+      <h2>Understanding CAN and Its Role in Automotive Systems</h2>
+      <p>CAN is a multi-master, message-based, differential serial bus designed for real-time communication in electrically noisy environments. Unlike address-based networks, CAN relies on identifier based prioritization, allowing messages to compete for the bus without collisions.</p>
+      
+      <h3>Core Building Blocks of CAN Communication</h3>
+      <h4>1) Physical Layer and Bus Architecture</h4>
+      <p><strong>Purpose:</strong> Defines how bits physically travel across wires.</p>
+      <ul>
+        <li>Differential signaling using CAN_H and CAN_L</li>
+        <li>Dominant vs recessive logic levels</li>
+        <li>High-Speed CAN (ISO 11898-2) and Fault-Tolerant CAN (ISO 11898-3)</li>
+        <li>Termination strategies: 120 Ω, split termination</li>
+        <li>Stub length constraints and impedance matching</li>
+        <li>EMI resilience, propagation delay, reflections, and ringing</li>
+      </ul>
+      <p>A solid CAN network begins with correct physical design. Most real world CAN issues originate here-not in software.</p>
+
+      <h4>2) CAN Node Architecture</h4>
+      <p><strong>Purpose:</strong> Explains how a CAN-capable ECU is structured.</p>
+      <ul>
+        <li>CAN controller, transceiver, and MCU interaction</li>
+        <li>TX mailboxes and RX FIFOs</li>
+        <li>Acceptance filtering at hardware level</li>
+        <li>Error handling and bus monitoring</li>
+      </ul>
+      <p>Understanding node internals is essential for building reliable and scalable networks.</p>
+
+      <h4>3) Arbitration and Bit Timing</h4>
+      <p><strong>Purpose:</strong> Ensures deterministic access to the bus.</p>
+      <ul>
+        <li>Bit-wise arbitration logic</li>
+        <li>Identifier priority and arbitration loss handling</li>
+        <li>Bit timing engine: SYNC_SEG, PROP_SEG, PHASE_SEG1, PHASE_SEG2</li>
+        <li>Sample point tuning for 125 kbps to 1 Mbps</li>
+        <li>Effects of propagation delay and oscillator tolerance</li>
+      </ul>
+      <p>CAN does not avoid conflicts-it resolves them predictably.</p>
+
+      <h4>4) CAN Frame Structure and Messaging Rules</h4>
+      <p><strong>Purpose:</strong> Defines how data is formatted and validated.</p>
+      <ul>
+        <li>Data, Remote, Error, and Overload frames</li>
+        <li>Standard (11-bit) vs Extended (29-bit) identifiers</li>
+        <li>Bit stuffing rules</li>
+        <li>CRC polynomial and frame-level validation</li>
+        <li>ACK mechanism and frame acknowledgment</li>
+      </ul>
+      <p>Frames are governed by strict protocol rules that ensure data integrity even in noisy environments.</p>
+
+      <h4>5) Error Detection, Handling, and Fault Confinement</h4>
+      <p><strong>Purpose:</strong> Enables self-healing network behavior.</p>
+      <ul>
+        <li>Bit, Stuff, Form, CRC, and ACK errors</li>
+        <li>Active vs Passive error states</li>
+        <li>Error counters (TEC, REC)</li>
+        <li>Bus-Off detection and recovery</li>
+      </ul>
+      <p>CAN nodes are not just participants-they are self-policing entities.</p>
+
+      <h4>6) Hardware Acceptance Filtering and Buffering</h4>
+      <p><strong>Purpose:</strong> Manages traffic efficiently in dense networks.</p>
+      <ul>
+        <li>Filter banks, masks, and ID matching</li>
+        <li>Range-based filtering for multi-ECU systems</li>
+        <li>RX FIFO0 / FIFO1 buffering</li>
+        <li>TX mailbox arbitration and priority</li>
+        <li>Handling overflow and lost frames under high bus load</li>
+      </ul>
+      <p>Filtering ensures ECUs process only what they need-critical for real-time performance.</p>
+
+      <h4>7) CAN Controller Registers and Software Architecture</h4>
+      <p><strong>Purpose:</strong> Bridges protocol theory and implementation.</p>
+      <ul>
+        <li>Core registers: MCR, MSR, TSR, RF0R, RF1R, ESR, IER, BTR</li>
+        <li>Interrupt-driven vs polling-based communication</li>
+        <li>Mailbox state machines and TXOK tracking</li>
+        <li>RX overflow detection and recovery mechanisms</li>
+      </ul>
+      <p>True CAN mastery requires understanding what happens below the driver layer.</p>
+
+      <h4>8) CAN in Real-World Applications</h4>
+      <p><strong>Purpose:</strong> Shows how CAN is used beyond raw frames.</p>
+      <ul>
+        <li>CANopen for industrial automation</li>
+        <li>SAE J1939 for heavy vehicles</li>
+        <li>UDS and OBD-II diagnostics</li>
+        <li>Multi-frame transport protocols</li>
+      </ul>
+      <p>This is where CAN becomes a system-level communication language.</p>
+
+      <h4>9) Hands On CAN Network Engineering</h4>
+      <p><strong>Purpose:</strong> Translates theory into practice.</p>
+      <ul>
+        <li>Building live CAN networks</li>
+        <li>Real-time frame transmission and monitoring</li>
+        <li>Acceptance filtering implementation</li>
+        <li>Forced error injection and bus-off recovery</li>
+        <li>Oscilloscope analysis of CAN signals</li>
+      </ul>
+      <p>Hands-on validation is essential for real world confidence.</p>
+
+      <h4>10) CAN Security and Emerging Challenges</h4>
+      <p><strong>Purpose:</strong> Addresses modern threat scenarios.</p>
+      <ul>
+        <li>Inherent vulnerabilities: no authentication, broadcast trust</li>
+        <li>Identifier spoofing, replay attacks, flooding, DoS</li>
+        <li>Intrusion detection concepts</li>
+        <li>Secure messaging: MACs, freshness, rolling counters</li>
+        <li>Secure gateways, segmentation, and defense-in-depth</li>
+      </ul>
+      <p>As vehicles become connected, CAN security becomes a critical engineering concern.</p>
+
+      <h3>Best Practices for Robust CAN Design</h3>
+      <p>To build reliable CAN systems, engineers should follow these best practices:</p>
+      <ul>
+        <li>Start with physical layer correctness</li>
+        <li>Design identifiers and priorities early</li>
+        <li>Validate bit timing across all nodes</li>
+        <li>Monitor error counters during testing</li>
+        <li>Test under high bus load</li>
+        <li>Simulate fault and attack scenarios</li>
+        <li>Use hardware filtering strategically</li>
+      </ul>
+      <p>Robust CAN design is proactive, not reactive.</p>
+
+      <h3>Conclusion</h3>
+      <p>CAN remains the silent backbone of automotive and industrial systems not because it is simple, but because it is exceptionally well engineered. Mastering CAN requires understanding its behavior across physics, protocol, hardware, software, and security domains.</p>
+      <p>For students, CAN knowledge opens doors to automotive and embedded careers.</p>
+      <p>For professionals, deep CAN expertise enables confident debugging, optimization, and system design.</p>
+      <p>Understanding CAN is not about sending messages. It is about engineering communication that survives noise, faults, load, and time. And that is why CAN still matters.</p>
+    `,
+    author: 'Autointelect Team',
+    date: '2024-12-28',
+    category: 'Vehicle Technology',
+    readTime: '8 min read'
+  },
+  {
+  id: '6',
   title: 'ADAS: Advanced Driver Assistance Systems or Automated Data Acquisition Systems?',
-  slug: 'adas-advanced-driver-assistance-vs-data-acquisition',
+  slug: 'adas advance driver-assistance vs data acquisition',
   excerpt: 'A deep dive into the evolution of ADAS, Level 5 autonomy, and the ethical dilemmas of data-driven driving systems.',
   content: `
 # ADAS: Advanced Driver Assistance Systems or Automated Data Acquisition Systems?
@@ -406,7 +547,7 @@ While analyzing driver behavior unquestionably improves safety, the question rem
 
 ## Conclusion
 
-ADAS has undeniably improved safety and convenience. But as we move toward L5 autonomous vehicles—where the driver disappears entirely—we must ask ourselves:
+ADAS has undeniably improved safety and convenience. But as we move toward L5 autonomous vehicles where the driver disappears entirely we must ask ourselves:
 
 *Are we ready to hand over complete control to machines that learn from us and eventually operate independently?*
 

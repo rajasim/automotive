@@ -46,8 +46,8 @@ const Contact: React.FC = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-lg mb-1 text-primary">Phone</h3>
-                        <p className="text-muted-foreground">+918888899999</p>
-                        <p className="text-sm text-muted-foreground mt-1">Mon-Fri: 9:00 AM - 6:00 PM</p>
+                        <p className="text-muted-foreground">+91 9049541315</p>
+                       
                       </div>
                     </div>
                   </CardContent>
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-lg mb-1 text-primary">Email</h3>
-                        <a href="mailto:info@autointelect.com" className="text-muted-foreground">info@autointelect.com</a>
+                        <a href="mailto:info@autointellects.com" className="text-muted-foreground">info@autointellects.com</a>
 
                         <p className="text-sm text-muted-foreground mt-1">We'll respond within 24 hours</p>
                       </div>
@@ -79,7 +79,6 @@ const Contact: React.FC = () => {
                         <h3 className="font-semibold text-lg mb-1 text-primary">Training Schedule</h3>
                         <p className="text-muted-foreground">
                           Weekend Courses: Saturday & Sunday<br />
-                          Timing: 9:00 AM - 1:00 PM<br />
                           Corporate Training: Flexible scheduling
                         </p>
                       </div>

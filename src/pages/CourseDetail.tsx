@@ -174,9 +174,14 @@ const CourseDetail: React.FC = () => {
                   <div className="text-3xl font-bold text-accent">
                     {formatPrice(course.price, course.currency)}
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    For Professionals (Not a professional? If you're a student, contact us at info@autointelects.com for exclusive student pricing )
-                  </p>
+                  <p className="text-sm text-muted-foreground font-extrabold">
+  For Professionals (Not a professional? If you're a student, contact us at{' '}
+  <a href="mailto:info@autointelects.com" className="text-blue-500 underline">
+    info@autointelects.com
+  </a>{' '}
+  for exclusive student pricing )
+</p>
+
                   <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                     <DialogTrigger asChild>
                       <Button className="w-full">

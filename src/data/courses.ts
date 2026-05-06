@@ -8,7 +8,7 @@ export const courses: Course[] = [
     slug: 'vehicle-systems',
     description: 'Comprehensive training on automotive vehicle systems designed for students aspiring to enter the automotive industry.',
     duration: '4 weekends × 4 hours (Saturday + Sunday)',
-    targetAudience: 'Professionals',
+    targetAudience: 'Professionals & Students',
     price: 30000,
     currency: 'INR',
     image: '/images/IMG_4784.JPG',
@@ -40,7 +40,7 @@ export const courses: Course[] = [
     slug: 'iso-26262',
     description: 'Professional training on ISO 26262 functional safety standards for automotive professionals and corporate teams.',
     duration: 'Multiple sessions (3+ hours each)',
-    targetAudience: 'Professionals',
+    targetAudience: 'Professionals & Students',
     price: 60000,
     currency: 'INR',
     image: '/images/IMG_4783.JPG',
@@ -74,7 +74,7 @@ export const courses: Course[] = [
     slug: 'aiag-vda-fmea-program',
     description: 'In-depth training on  FMEA Program used in modern vehicles (COMING SOON..).',
     duration: 'One day program × 6 hours',
-    targetAudience: ' Professionals',
+    targetAudience: ' Professionals & Students',
     price: 12000,
     currency: 'INR',
     image: '/images/IMG_4785.JPG', // Replace with your actual image URL
@@ -109,7 +109,7 @@ export const courses: Course[] = [
     slug: 'cybersecurity-in-automotive-systems',
     description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
     duration: 'Two day program × 8 hours',
-    targetAudience: ' Professionals',
+    targetAudience: ' Professionals & Students',
     price: 25000,
     currency: 'INR',
     image: '/images/IMG_4786.JPG', // Replace with your actual image URL
@@ -140,13 +140,14 @@ export const courses: Course[] = [
       'Gain expertise in cybersecurity controls and lifecycle management.'
     ]
   },
+  
   {
     id: '5',
     title: 'Can',
     slug: 'cybersecurity-in-automotive-systems',
     description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
     duration: 'Two day program × 8 hours',
-    targetAudience: ' Professionals',
+    targetAudience: ' Professionals & Students',
     price: 20000,
     currency: 'INR',
     image: '/images/IMG_4787.JPG', // Replace with your actual image URL
@@ -183,7 +184,7 @@ export const courses: Course[] = [
     slug: 'Industrial, hands-on cybersecurity analysis training based on ISO 21434 with deep technical practice.',
     description: 'Industrial, hands-on cybersecurity analysis training based on ISO 21434 with deep technical practice.',
     duration: '3 Days × 4 Hours per day (Total: 12 Hours)',
-    targetAudience: ' Professionals',
+    targetAudience: ' Professionals & Students',
     price: 20000,
     currency: 'INR',
     image: '/images/IMG_4788.JPG', // Replace with your actual image URL
@@ -212,6 +213,54 @@ export const courses: Course[] = [
       'Build cybersecurity goals and derive requirements.',
       'Create and document professional TARA reports for industry use.',
       'Gain practical, real-world automotive cybersecurity analysis experience.'
+    ]
+  },
+  {
+    id: '7',
+    title: 'OTA ',
+    slug: 'comming soon.',
+    description: 'comming soon.',
+    duration: 'commig soon.',
+    targetAudience: ' Professionals & Students',
+    price: 20000,
+    currency: 'INR',
+    image: '/images/ota.jpeg', // Replace with your actual image URL
+    topics: [
+      
+      'comming soon'
+      
+    ],
+    eligibility: [
+      
+      'comming soon'
+    ],
+    learningOutcomes: [
+      
+      'comming soon'
+    ]
+  },
+  {
+    id: '8',
+    title: 'FOTA ',
+    slug: 'comming soonn.',
+    description: 'comming soon.',
+    duration: 'commig soon',
+    targetAudience: ' Professionals & Students',
+    price: 20000,
+    currency: 'INR',
+    image: '/images/fota.jpeg', // Replace with your actual image URL
+    topics: [
+      
+      'comming soon'
+      
+    ],
+    eligibility: [
+      
+      'comming soon'
+    ],
+    learningOutcomes: [
+      
+      'comming soon'
     ]
   }
 ];

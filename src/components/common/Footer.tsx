@@ -23,21 +23,32 @@ const Footer: React.FC = () => {
             <div className="space-y-3 text-primary-foreground/80">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-accent" />
-                <p> 1170 15A 4th Floor City Vista
+                <p>1170 15A 4th Floor City Vista
 Fountain Road Kharadi Pune
 Maharashtra 411014</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 flex-shrink-0 text-accent" />
-                <p>+91 8888899999</p>
+                <p>+919049541315</p>
               </div>
-             <div className="flex items-center space-x-3">
-  <Mail className="h-5 w-5 flex-shrink-0 text-accent" />
-  <a href="mailto:info@autointellects.com" className="text-accent hover:underline">
-    info@autointellects.com
-  </a>
-</div>
-
+              <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 flex-shrink-0 text-accent" />
+                <a href="mailto:info@autointellects.com" className="text-accent hover:underline">
+                  info@autointellects.com
+                </a>
+              </div>
+              {/* WhatsApp Button */}
+              <div className="flex items-center space-x-3">
+                <a
+                  href="https://wa.me/919049541315"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:underline flex items-center space-x-2"
+                >
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="h-5 w-5" />
+                  <span>WhatsApp</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -45,7 +56,6 @@ Maharashtra 411014</p>
             <h3 className="text-xl font-semibold mb-4 text-accent">Training Schedule</h3>
             <div className="space-y-2 text-primary-foreground/80">
               <p>Weekend Program: Saturday & Sunday</p>
-              
               <p>Corporate Training: Flexible scheduling available</p>
             </div>
           </div>

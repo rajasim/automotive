@@ -5,199 +5,185 @@ import * as z from 'zod';
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
-import type { Course } from '@/types';
 
-const formSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
-  email: z.string().email('Invalid email address'),
-  phone: z.string().min(10, 'Phone number must be at least 10 digits'),
-  education: z.string().min(2, 'Please enter your education background'),
-  experience: z.string().min(2, 'Please enter your experience level'),
-  message: z.string().optional()
-});
-
-type FormData = z.infer<typeof formSchema>;
-
-interface EnrollmentFormProps {
-  course: Course;
-  onSuccess?: () => void;
+// Tells TypeScript that Razorpay is available on the window object
+declare global {
+  interface Window {
+    Razorpay: any;
+  }
 }
 
-const EnrollmentForm: React.FC<EnrollmentFormProps> = ({ course, onSuccess }) => {
+// Define the form validation schema
+const formSchema = z.object({
+  name: z.string().min(2, 'Full name is required'),
+  email: z.string().email('Invalid email address'),
+  phone: z.string().min(10, 'Valid phone number is required'),
+  education: z.string().min(2, 'Please enter your education background'),
+  selectedCourse: z.string().min(1, 'Please select a course'),
+});
+
+// List of available courses with their prices
+const coursesList = [
+  { id: '1', name: 'Weekend Program: Vehicle Systems', price: 1 },
+  { id: '2', name: 'Weekend Program: ISO 26262', price: 25000 },
+  { id: '3', name: 'FMEA Program', price: 12000 },
+  { id: '4', name: 'Cybersecurity in Automotive Systems', price: 20000 },
+  { id: '5', name: 'Cybersecurity in Automotive Systems (ISO 21434)', price: 22000 },
+  { id: '6', name: 'Weekend Program: Automotive Cyber Battleground (TARA – ISO 21434)', price: 28000 }
+];
+
+const EnrollmentForm = () => {
   const { toast } = useToast();
   const [isProcessing, setIsProcessing] = useState(false);
 
-  const form = useForm<FormData>({
+  const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: '', // Default value for name
-      email: '', // Default value for email
-      phone: '', // Default value for phone
-      education: '', // Default value for education
-      experience: '', // Default value for experience
-      message: '' // Default value for message (optional)
+      name: '',
+      email: '',
+      phone: '',
+      education: '',
+      selectedCourse: ''
     }
   });
 
-  const onSubmit = async (data: FormData) => {
+  // Watch the selected course to display the correct price on the button
+  const selectedCourseName = form.watch('selectedCourse');
+  const selectedCourseData = coursesList.find(c => c.name === selectedCourseName);
+
+  const onSubmit = (data: z.infer<typeof formSchema>) => {
+    if (!selectedCourseData) {
+      toast({ title: "Selection Required", description: "Please select a course to proceed." });
+      return;
+    }
+
     setIsProcessing(true);
-    try {
-      // Send the form data to the backend (e.g., PHP backend)
-      const response = await fetch('http://autointellects.com/autointeliigencontact/form-handler.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+
+    // Razorpay Configuration Options
+    const options = {
+      // REPLACE THIS with your actual Test Key from Razorpay Dashboard
+      key: "rzp_live_SmAPt9JdFQjkqa", 
+      amount: selectedCourseData.price * 100, // Amount in paise (e.g., 15000 * 100)
+      currency: "INR",
+      name: "Auto Intellects",
+      description: `Enrollment: ${data.selectedCourse}`,
+      image: "/AutoIntellects Logo short v1.png", 
+      handler: function (response: any) {
+        // This callback runs after successful payment
+        toast({
+          title: "Payment Successful!",
+          description: `Transaction ID: ${response.razorpay_payment_id}. You are now enrolled.`,
+        });
+        setIsProcessing(false);
+        form.reset();
+      },
+      prefill: {
+        name: data.name,
+        email: data.email,
+        contact: data.phone,
+      },
+      theme: {
+        color: "#2563eb", // Professional Blue
+      },
+      modal: {
+        ondismiss: function () {
+          setIsProcessing(false);
         },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          phone: data.phone,
-          education: data.education,
-          experience: data.experience,
-          message: data.message || '', // message is optional
-        }),
-      });
+      },
+    };
 
-      const result = await response.json();
-
-      if (response.ok) {
-        toast({
-          title: 'Message Sent!',
-          description: 'Thank you for contacting us. We will get back to you soon.',
-        });
-        if (onSuccess) onSuccess();
-      } else {
-        toast({
-          title: 'Error',
-          description: result.message || 'Something went wrong. Please try again later.',
-          variant: 'destructive',
-        });
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
+    try {
+      const rzp = new window.Razorpay(options);
+      rzp.open();
+    } catch (err) {
+      console.error("Razorpay SDK Error:", err);
       toast({
-        title: 'Submission Failed',
-        description: 'Something went wrong. Please try again later.',
-        variant: 'destructive',
+        title: "Gateway Error",
+        description: "Could not open payment gateway. Please check your connection.",
+        variant: "destructive"
       });
-    } finally {
       setIsProcessing(false);
     }
   };
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        {/* Name Field */}
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
+    <div className="max-w-lg mx-auto p-6 bg-white rounded-2xl shadow-xl border border-gray-100">
+      <div className="mb-6 text-center">
+        <h2 className="text-2xl font-bold text-gray-900">Course Enrollment</h2>
+        <p className="text-sm text-gray-500">Complete the form to proceed to secure payment.</p>
+      </div>
+
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          
+          <FormField control={form.control} name="name" render={({ field }) => (
             <FormItem>
-              <FormLabel>Full Name</FormLabel>
+              <FormControl><Input placeholder="Full Name" className="h-11" {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <FormField control={form.control} name="email" render={({ field }) => (
+              <FormItem>
+                <FormControl><Input type="email" placeholder="Email Address" className="h-11" {...field} /></FormControl>
+                <FormMessage />
+              </FormItem>
+            )} />
+            <FormField control={form.control} name="phone" render={({ field }) => (
+              <FormItem>
+                <FormControl><Input placeholder="Phone Number" className="h-11" {...field} /></FormControl>
+                <FormMessage />
+              </FormItem>
+            )} />
+          </div>
+
+          <FormField control={form.control} name="education" render={({ field }) => (
+            <FormItem>
+              <FormControl><Input placeholder="Education Background (e.g. B.Tech)" className="h-11" {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+
+          <FormField control={form.control} name="selectedCourse" render={({ field }) => (
+            <FormItem>
               <FormControl>
-                <Input placeholder="Your full name" {...field} />
+                <select 
+                  {...field} 
+                  className="w-full h-11 px-3 rounded-md border border-input bg-white text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                >
+                  <option value="">-- Select a Course --</option>
+                  {coursesList.map((c) => (
+                    <option key={c.id} value={c.name}>{c.name}</option>
+                  ))}
+                </select>
               </FormControl>
               <FormMessage />
             </FormItem>
-          )}
-        />
+          )} />
 
-        {/* Email Field */}
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input type="email" placeholder="your.email@example.com" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+          <Button 
+            type="submit" 
+            className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg transition-all shadow-md"
+            disabled={isProcessing}
+          >
+            {isProcessing ? (
+              <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Initializing...</>
+            ) : (
+              selectedCourseData 
+                ? `Pay ₹${selectedCourseData.price.toLocaleString('en-IN')}` 
+                : "Proceed to Payment"
+            )}
+          </Button>
 
-        {/* Phone Field */}
-        <FormField
-          control={form.control}
-          name="phone"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Phone</FormLabel>
-              <FormControl>
-                <Input type="tel" placeholder="+91-XXXX-XXXXXX" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        {/* Education Background Field */}
-        <FormField
-          control={form.control}
-          name="education"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Education Background</FormLabel>
-              <FormControl>
-                <Input placeholder="e.g., B.Tech Mechanical Engineering" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        {/* Experience Level Field */}
-        <FormField
-          control={form.control}
-          name="experience"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Experience Level</FormLabel>
-              <FormControl>
-                <Input placeholder="e.g., Student / 2 years in automotive" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        {/* Message Field */}
-        <FormField
-          control={form.control}
-          name="message"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Additional Message (Optional)</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Any specific questions or requirements..."
-                  className="min-h-24"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        {/* Submit Button */}
-        <Button type="submit" className="w-full" size="lg" disabled={isProcessing}>
-          {isProcessing ? (
-            <>
-              <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-              Processing...
-            </>
-          ) : (
-            `Proceed to Payment - ${course.currency === 'INR' ? '₹' : course.currency} ${course.price.toLocaleString('en-IN')}`
-          )}
-        </Button>
-      </form>
-    </Form>
+          <p className="text-center text-[10px] text-gray-400 uppercase tracking-widest pt-2">
+            Secure Payment via Razorpay
+          </p>
+        </form>
+      </Form>
+    </div>
   );
 };
 
