@@ -5,7 +5,7 @@ export const courses: Course[] = [
   {
     id: '1',
     title: 'Weekend Program: Vehicle Systems',
-    slug: 'vehicle-systems',
+    slug: 'vehicle systems',
     description: 'Comprehensive training on automotive vehicle systems designed for students aspiring to enter the automotive industry.',
     duration: '4 weekends × 4 hours (Saturday + Sunday)',
     targetAudience: 'Professionals & Students',
@@ -71,7 +71,7 @@ export const courses: Course[] = [
   {
     id: '3',
     title: ' FMEA Program',
-    slug: 'aiag-vda-fmea-program',
+    slug: 'aiag vda fmea program',
     description: 'In-depth training on  FMEA Program used in modern vehicles (COMING SOON..).',
     duration: 'One day program × 6 hours',
     targetAudience: ' Professionals & Students',
@@ -106,7 +106,7 @@ export const courses: Course[] = [
   {
     id: '4',
     title: 'Cybersecurity in Automotive Systems',
-    slug: 'cybersecurity-in-automotive-systems',
+    slug: 'cybersecurity in automotive systems',
     description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
     duration: 'Two day program × 8 hours',
     targetAudience: ' Professionals & Students',
@@ -144,7 +144,7 @@ export const courses: Course[] = [
   {
     id: '5',
     title: 'Can',
-    slug: 'can-bus-in-automotive-systems',
+    slug: 'can bus in automotive systems',
   description: 'Comprehensive training on CAN protocol, MCU implementation, OEM diagnostics, CAN-FD, and network security',
     duration: 'Two day program × 8 hours',
     targetAudience: ' Professionals & Students',
