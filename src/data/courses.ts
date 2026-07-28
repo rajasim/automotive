@@ -144,8 +144,8 @@ export const courses: Course[] = [
   {
     id: '5',
     title: 'Can',
-    slug: 'cybersecurity in automotive systems',
-    description: 'In depth training on automotive cybersecurity, addressing various vehicle security issues.',
+    slug: 'can-bus-in-automotive-systems',
+  description: 'Comprehensive training on CAN protocol, MCU implementation, OEM diagnostics, CAN-FD, and network security',
     duration: 'Two day program × 8 hours',
     targetAudience: ' Professionals & Students',
     price: 20000,
