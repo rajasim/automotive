@@ -152,17 +152,14 @@ export const courses: Course[] = [
     currency: 'INR',
     image: '/images/IMG_4787.JPG', // Replace with your actual image URL
     topics: [
-      'Introduction to Cybersecurity',
-      'Introduction to Automotive Cybersecurity',
-      'Need for Vehicle Security',
-      'Safety vs Cybersecurity',
-      'Business Impact',
-      'CIA Triad',
-      'Real-world cybersecurity failures',
-      'Attack vectors & best practices',
-      'Backend/server-side risks',
-      'Keyless entry attacks',
-      'Types of attacks'
+   'CAN Physical Layer & Node Architecture',
+'Bit Timing & Synchronization',
+'Protocol & Arbitration Mechanics',
+'Frame Management & Data Packing',
+'Advanced Filtering & Diagnostics',
+'Microcontroller Integration',
+'High-Level Networks & CAN-FD',
+'Automotive Cybersecurity'
     ],
     eligibility: [
       'Engineering students (Electrical, Electronics, Automotive)',
@@ -170,12 +167,13 @@ export const courses: Course[] = [
       'Anyone interested in learning about the electronics in modern vehicles'
     ],
     learningOutcomes: [
-      'Understand fundamental concepts of automotive cybersecurity.',
-      'Learn ISO/SAE 21434 terminology, structure, and compliance requirements.',
-      'Perform Threat Analysis & Risk Assessment (TARA).',
-      'Identify attack paths, vulnerabilities, and mitigation techniques.',
-      'Learn automotive-specific testing methods (fuzzing, penetration testing, scanning).',
-      'Gain expertise in cybersecurity controls and lifecycle management.'
+     'Design and Architect',
+'Analyze and Troubleshoot',
+'Program at the Register Level',
+'Decode and Pack Payloads',
+'Perform OEM-Level Diagnostics',
+'Implement Advanced Protocols',
+'Secure Automotive Networks'
     ]
   },
   {
