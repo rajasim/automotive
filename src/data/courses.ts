@@ -144,8 +144,8 @@ export const courses: Course[] = [
   {
     id: '5',
     title: 'Can',
-    slug: 'cybersecurity-in-automotive-systems',
-    description: 'In-depth training on automotive cybersecurity, addressing various vehicle security issues.',
+    slug: 'cybersecurity in automotive systems',
+    description: 'In depth training on automotive cybersecurity, addressing various vehicle security issues.',
     duration: 'Two day program × 8 hours',
     targetAudience: ' Professionals & Students',
     price: 20000,
